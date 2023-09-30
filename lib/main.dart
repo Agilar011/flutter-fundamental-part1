@@ -1,19 +1,72 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MainApp());
-}
+void main() => runApp(MyApp());
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+// class MyApp extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       debugShowCheckedModeBanner: false,
+//       home: Container(
+//         margin: EdgeInsets.only(top: 30),
+//         color: Colors.white,
+//         child: Column(
+//           children: <Widget>[
+//             AppBar(title: Text('Contoh Cupertino')),
+//             CupertinoButton(
+//               child: Text("Contoh button"),
+//               onPressed: () {},
+//             ),
+//             CupertinoActivityIndicator(),
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }
 
+// class MyApp extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: Scaffold(
+//         floatingActionButton: FloatingActionButton(
+//           onPressed: () {
+//             // Add your onPressed code here!
+//           },
+//           child: Icon(Icons.thumb_up),
+//           backgroundColor: Colors.pink,
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+class MyApp extends StatelessWidget {
+  int _count = 0;
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
+        appBar: AppBar(
+          title: Text('Tugas Week 5'),
         ),
+        body: Center(
+          child: Text('Agilar Gumilar'),
+        ),
+        bottomNavigationBar: BottomAppBar(
+          child: Container(
+            height: 50.0,
+          ),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () => 0,
+          tooltip: 'Increment Counter',
+          child: Icon(Icons.add),
+        ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       ),
     );
   }
