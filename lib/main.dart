@@ -51,10 +51,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Tugas Week 5'),
+          title: Text('Sample Code'),
         ),
         body: Center(
-          child: Text('Agilar Gumilar'),
+          child: Text('You have pressed the button $_count times.'),
         ),
         bottomNavigationBar: BottomAppBar(
           child: Container(
